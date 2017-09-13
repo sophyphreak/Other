@@ -1,0 +1,63 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 22 01:31:21 2017
+
+@author: Andrew
+"""
+
+class item(object):
+    def __init__(self, name, value, weight):
+        #create an item with a name, value, and weight
+        self.name = name
+        self.value = value
+        self.weight = weight
+    def getName(self):
+        #returns name of item
+        return self.name
+    def getValue(self):
+        #returns value of item
+        return self.value
+    def getWeight(self):
+        #returns weight of item
+        return self.weight
+    def getRatio(self):
+        #returns ratio of value to weight
+        return self.value/self.weight
+        
+class knapsack(object):
+    def __init__(self, name, maxWeight):
+        #creates a knapsack with a name and a max weight
+        self.name = name
+        self.maxWeight = maxWeight
+        self.weight = 0
+        self.value = 0
+        self.itemsInside = []
+    def getName(self):
+        #returns name of knapsack
+        return self.name
+    def getMaxWeight(self):
+        #returns max weight of knapsack
+        return self.maxWeight
+    def getWeight(self):
+        #returns current weight of items in knapsack
+        return self.weight
+    def getValue(self):
+        #returns current value of items within knapsack
+        return self.value
+    def getitemsInside(self):
+        #returns list of names of items inside knapsack
+        for i in self.itemsInside:
+            print(item.getName())
+    def getRatio(self):
+        #returns ratio of value/weight
+        return self.value/self.weight
+#    def addItem(self, item)
+#        #adds an item to the knapsack
+
+
+clock = item("clock", 175, 10)
+picture = item("picture", 90, 9)
+radio = item("radio", 20, 4)
+vase = item("vase", 50, 2)
+book = item("book", 10, 1)
+computer = item("computer", 200, 20)

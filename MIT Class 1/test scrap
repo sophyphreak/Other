@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb 13 00:51:51 2017
+
+@author: Andrew
+"""
+L = [1,2,3]
+d = {'a': 'b'}
+def f(x):
+    return 3

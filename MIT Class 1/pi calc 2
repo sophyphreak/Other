@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Mar  3 19:52:06 2017
+
+@author: Andrew
+"""
+
+def fact(n):
+    ans = 1
+    for i in range(n):
+        ans *= (i + 1)
+    return ans
+
+def pi(n):
+    ans = 0
+    for i in range(n+1):
+        ans += (((-1)**n)*(fact(6*n))*(13591409 + 545140134*n)) /          \
+                ((fact(3*n))*((fact(n))**3)*640320**(3*n+3/2))
+    ans *= 12
+    return ans**-1
+    
+pi1 = 3.141592653589734207668453
+pi2 = 3.141592653589793238462642

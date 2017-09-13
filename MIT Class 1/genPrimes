@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Mar  2 23:37:06 2017
+
+@author: Andrew
+"""
+
+def genPrimes():
+    primes = []
+    current = 2
+    while True:
+        pass1 = True
+        for num in primes:
+            if not (current % num) != 0:
+                current += 1
+                pass1 = False
+        if pass1 == True:
+            primes += [current]
+            yield current
+            current += 1
+
+primeGenerator = genPrimes()
+primeGenerator.__next__()
